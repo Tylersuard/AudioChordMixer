@@ -3,7 +3,7 @@ paths:
 speech_commands:
     chordmixer:
       backbone:
-        var_len: True
+        var_len: False
         input_size: 256
         output_size: 3
         max_seq_len: 16000
@@ -12,16 +12,16 @@ speech_commands:
         track_size: 12
         mlp_dropout: 0.1
         layer_dropout: 0
-        prenorm: None
-        norm: None
+        prenorm: BN
+        norm: BN
         decoder: 'linear'
       training:
-        n_epochs: 20
-        batch_size: 2
-        lr: 0.0001
+        n_epochs: 40
+        batch_size: 25
+        lr: 0.001
         weight_decay: 0.1
         scheduler: 'linear_warmup_cosine_decay'
-        n_warmup_steps: 50
+        n_warmup_steps: 5000
 longdoc:
     chordmixer:
       backbone:

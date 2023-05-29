@@ -2,7 +2,7 @@ from .genbank import GenbankDataModule
 from .longdoc import LongdocDataModule
 from .adding  import AddingDataModule
 
-from .speech_commands import SpeechCommandsDataModule
+from .speech_commands_pad import SpeechCommandsDataModule
 
 from .lra_listops import ListOpsDataModule
 from .lra_listops_var import ListOpsDataModuleVar
